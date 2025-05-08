@@ -1,0 +1,6 @@
+# Directorles
+.vs/
+bin/
+
+# Files
+*.user
