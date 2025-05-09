@@ -4,3 +4,5 @@
 #include "Application.h"
 // Entry Point
 #include "EntryPoint.h"
+
+#include "Log.h"

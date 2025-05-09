@@ -1,6 +1,6 @@
 #include "Nanach/Nanach.h"
 class Sandbox : public Nanach::Application
-{	
+{
 public:
 	Sandbox()
 	{
