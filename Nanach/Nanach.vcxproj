@@ -11,10 +11,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Nanach\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Nanach\Events\Event.h" />
+    <ClInclude Include="src\Nanach\Events\KeyEvent.h" />
+    <ClInclude Include="src\Nanach\Events\MouseEvent.h" />
+    <ClInclude Include="src\Nanach\KeyCode.h" />
     <ClInclude Include="src\Nanach\Log.h" />
     <ClInclude Include="src\Nanach\Application.h" />
     <ClInclude Include="src\Nanach\Core.h" />
     <ClInclude Include="src\Nanach\EntryPoint.h" />
+    <ClInclude Include="src\Nanach\MouseCode.h" />
     <ClInclude Include="src\Nanach\Nanach.h" />
   </ItemGroup>
   <ItemGroup>
@@ -68,7 +74,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -84,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
