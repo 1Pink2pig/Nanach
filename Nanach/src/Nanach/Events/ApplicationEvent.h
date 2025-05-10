@@ -1,6 +1,6 @@
 #pragma once
+#include "chpch.h"
 #include "Nanach/Events/Event.h"
-#include <sstream>
 
 namespace Nanach {
 	class WindowResizeEvent : public Event

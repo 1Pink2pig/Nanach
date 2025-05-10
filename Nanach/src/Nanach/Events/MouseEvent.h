@@ -1,7 +1,9 @@
 #pragma once
+
+#include "chpch.h"
 #include "Nanach/Events/Event.h"
 #include "Nanach/MouseCode.h"
-#include <sstream>
+
 namespace Nanach
 {
 	class MouseMovedEvent : public Event

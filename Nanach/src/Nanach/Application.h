@@ -1,5 +1,9 @@
 #pragma once
 #include "Core.h"
+#include "Events/Event.h"
+#include "Nanach/Events/ApplicationEvent.h"
+#include "Nanach/Log.h"
+
 namespace Nanach
 {
 

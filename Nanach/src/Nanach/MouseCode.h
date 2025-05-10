@@ -1,5 +1,5 @@
 #pragma once
-#include <cstdint>
+#include "chpch.h"
 namespace Nanach {
 	using MouseCode = uint16_t;
 

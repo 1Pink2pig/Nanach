@@ -1,7 +1,8 @@
 #pragma once
+
+#include "chpch.h"
 #include "Event.h"
 #include "Nanach/KeyCode.h"
-#include <sstream>
 
 namespace Nanach {
 	class KeyEvent : public Event

@@ -1,3 +1,4 @@
+#include "chpch.h"
 #include "Application.h"
 namespace Nanach
 {
@@ -11,6 +12,8 @@ namespace Nanach
 
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 1080);
+		CH_TRACE(e.ToString());
 		while (true);
 	}
 

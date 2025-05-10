@@ -1,5 +1,5 @@
 #pragma once
-#include <cstdint>
+#include "chpch.h"
 
 namespace Nanach {
 	using KeyCode = uint16_t;

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\chpch.h" />
     <ClInclude Include="src\Nanach\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Nanach\Events\Event.h" />
     <ClInclude Include="src\Nanach\Events\KeyEvent.h" />
@@ -24,6 +25,10 @@
     <ClInclude Include="src\Nanach\Nanach.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\chpch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\Nanach\Log.cpp" />
     <ClCompile Include="src\Nanach\Application.cpp" />
   </ItemGroup>
@@ -76,6 +81,9 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,6 +100,9 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
