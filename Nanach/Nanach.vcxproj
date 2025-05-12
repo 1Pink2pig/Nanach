@@ -23,6 +23,8 @@
     <ClInclude Include="src\Nanach\EntryPoint.h" />
     <ClInclude Include="src\Nanach\MouseCode.h" />
     <ClInclude Include="src\Nanach\Nanach.h" />
+    <ClInclude Include="src\Nanach\Window.h" />
+    <ClInclude Include="src\Nanach\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\chpch.cpp">
@@ -31,6 +33,7 @@
     </ClCompile>
     <ClCompile Include="src\Nanach\Log.cpp" />
     <ClCompile Include="src\Nanach\Application.cpp" />
+    <ClCompile Include="src\Nanach\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -68,18 +71,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(SolutionDir)Nanach\vendor\GLFW\build\src\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(SolutionDir)Nanach\vendor\GLFW\build\src\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CH_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CH_ENABLE_ASSERTS;CH_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\GLFW\include;$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -88,6 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -98,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\GLFW\include;$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -109,6 +115,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
