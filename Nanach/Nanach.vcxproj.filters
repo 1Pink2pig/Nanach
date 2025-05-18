@@ -57,6 +57,12 @@
     <ClInclude Include="src\Nanach\Platform\Windows\WindowsWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nanach\Layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nanach\LayerStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nanach\Application.cpp">
@@ -69,6 +75,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\Nanach\Platform\Windows\WindowsWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nanach\Layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nanach\LayerStack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

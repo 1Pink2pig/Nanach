@@ -6,3 +6,5 @@
 #include "EntryPoint.h"
 
 #include "Log.h"
+
+#include "Layer.h"

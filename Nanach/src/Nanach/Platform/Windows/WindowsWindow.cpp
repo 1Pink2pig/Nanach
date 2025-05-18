@@ -51,7 +51,7 @@ namespace Nanach {
 
 		//this fuc allow us to bind glfwWindow with data struct we designed by ourself
 		//and we can get this struct pointer through glfwGetWindowUserPointer() at any 
-		//callback,so that we can access instance data by callback(callback func must 
+		//callback,so that we can access instance data by callback(GLFWcallback func must 
 		// be static)
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 

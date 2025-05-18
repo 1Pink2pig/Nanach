@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Nanach\LayerStack.h" />
+    <ClInclude Include="src\Nanach\Layer.h" />
     <ClInclude Include="src\chpch.h" />
     <ClInclude Include="src\Nanach\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Nanach\Events\Event.h" />
@@ -27,6 +29,8 @@
     <ClInclude Include="src\Nanach\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Nanach\LayerStack.cpp" />
+    <ClCompile Include="src\Nanach\Layer.cpp" />
     <ClCompile Include="src\chpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
