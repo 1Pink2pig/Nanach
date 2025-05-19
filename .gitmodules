@@ -4,3 +4,6 @@
 [submodule "Nanach/vendor/GLFW"]
 	path = Nanach/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "Nanach/vendor/imgui"]
+	path = Nanach/vendor/imgui
+	url = https://github.com/ocornut/imgui.git

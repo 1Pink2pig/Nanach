@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nanach", "Nanach\Nanach.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLAD", "Nanach\vendor\GLAD\GLAD.vcxproj", "{1789D095-E54D-4E32-9AB5-6378834416C3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imgui", "Nanach\vendor\imgui\build\imgui.vcxproj", "{39F93E3D-D8D4-316A-887F-F4C4B085245B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,6 +29,10 @@ Global
 		{1789D095-E54D-4E32-9AB5-6378834416C3}.Debug|x64.Build.0 = Debug|x64
 		{1789D095-E54D-4E32-9AB5-6378834416C3}.Release|x64.ActiveCfg = Release|x64
 		{1789D095-E54D-4E32-9AB5-6378834416C3}.Release|x64.Build.0 = Release|x64
+		{39F93E3D-D8D4-316A-887F-F4C4B085245B}.Debug|x64.ActiveCfg = Debug|x64
+		{39F93E3D-D8D4-316A-887F-F4C4B085245B}.Debug|x64.Build.0 = Debug|x64
+		{39F93E3D-D8D4-316A-887F-F4C4B085245B}.Release|x64.ActiveCfg = Release|x64
+		{39F93E3D-D8D4-316A-887F-F4C4B085245B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
