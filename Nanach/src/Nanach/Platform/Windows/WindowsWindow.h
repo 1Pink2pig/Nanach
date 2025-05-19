@@ -1,7 +1,7 @@
 #pragma once
 #include "Nanach/Window.h"
 #include "Nanach/Log.h"
-#include <GLFW/glfw3.h>
+struct GLFWwindow;
 namespace Nanach {
 
 	class WindowsWindow :public Window

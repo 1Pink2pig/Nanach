@@ -1,6 +1,10 @@
 #include "chpch.h"
 #include "WindowsWindow.h"
 
+#include"glad/glad.h"
+#include<GLFW/glfw3.h>
+
+
 #include"Nanach/Events/ApplicationEvent.h"
 #include"Nanach/Events/KeyEvent.h"
 #include"Nanach/Events/MouseEvent.h"
@@ -48,6 +52,9 @@ namespace Nanach {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		CH_CORE_ASSERT(status, "Failed to initialize GLAD!");
+		// 检查 GLAD 是否真正加载了函数指针
 
 		//this fuc allow us to bind glfwWindow with data struct we designed by ourself
 		//and we can get this struct pointer through glfwGetWindowUserPointer() at any 

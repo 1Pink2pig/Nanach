@@ -11,7 +11,6 @@ namespace Nanach {
 	{
 		for (Layer* layer : m_Layers)
 		{
-			layer->OnDetach();
 			delete layer;
 		}
 	}

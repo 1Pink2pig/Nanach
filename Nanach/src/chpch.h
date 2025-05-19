@@ -14,7 +14,6 @@
 #include <unordered_map>
 #include <unordered_set>
 
-
 #include "Nanach/Log.h"
 #ifdef CH_PLATFORM_WINDOWS
 	#include <Windows.h>

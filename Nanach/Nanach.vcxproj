@@ -39,6 +39,11 @@
     <ClCompile Include="src\Nanach\Application.cpp" />
     <ClCompile Include="src\Nanach\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="vendor\GLAD\GLAD.vcxproj">
+      <Project>{1789d095-e54d-4e32-9ab5-6378834416c3}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -86,9 +91,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CH_ENABLE_ASSERTS;CH_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CH_ENABLE_ASSERTS;CH_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CH_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\GLFW\include;$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanach\vendor\GLFW\include;$(SolutionDir)Nanach\vendor\spdlog\include;$(SolutionDir)Nanach\src;$(SolutionDir)Nanach\vendor\GLAD\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -97,7 +102,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;glad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Configuration)-$(Platform)\GLAD\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
